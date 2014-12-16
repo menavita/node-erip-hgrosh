@@ -30,11 +30,6 @@ HGrosh.prototype.addBill = function(bill, cb)
     {
       // Отправляем данные 
       return _this._send('/API/v1/Invoicing/Bill', {}, bill, cb);
-    })
-    .then(function()
-    { 
-      // Разавторизируемся
-      return _this.logOut(); 
     });
 }
 
@@ -48,11 +43,6 @@ HGrosh.prototype.loadBills = function(start, end, sortby, cb)
     {
       // Отправляем данные 
       return _this._send('/API/v1/Invoicing/Bills('+start+','+end+','+sortby+')', {method: 'GET'}, null, cb);
-    })
-    .then(function()
-    { 
-      // Разавторизируемся
-      _this.logOut(); 
     });
 }
 
