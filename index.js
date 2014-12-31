@@ -18,7 +18,18 @@ function HGrosh(credential, http_proxy_options) {
   this.jar = request.jar();
 }
 
+HGrosh.prototype.infoBill = function(billId, cb)
+{
+  var _this = this;
 
+  // Авторизируемся
+  return this.logIn()
+    .then(function() 
+    {
+      // Отправляем данные 
+      return _this._send('/API/v1/Invoicing/Bill('+billId+')', {method: 'GET'}, null, cb);
+    });
+}
 
 HGrosh.prototype.addBill = function(bill, cb)
 {

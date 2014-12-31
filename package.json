@@ -1,6 +1,6 @@
 {
   "name": "node-erip-hgrosh",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Library to use HutkiGrosh API to ERIP in nodejs.",
   "author": {
     "name": "Egor Kuryanovich",
