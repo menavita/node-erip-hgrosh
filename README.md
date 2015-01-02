@@ -1,4 +1,3 @@
-#  [![Build Status](https://secure.travis-ci.org/Sontan/node-erip-hgrosh.png?branch=master)](http://travis-ci.org/Sontan/node-erip-hgrosh)
 
 Library to use [HutkiGrosh](http://hutkigrosh.by) API to ERIP in nodejs.
 =======
@@ -41,6 +40,7 @@ var hgrosh = new HGrosh(credential, {proxy: http_proxy});
 | Security/logIn   | HGrosh.logIn(credential) |
 | Security/logOut  | HGrosh.logOut() |
 | Invoicing/Bill   | HGrosh.addBill(bill) |
+| Invoicing/Bill(billId)   | HGrosh.infoBill(billId)|
 | Invoicing/Bills  | HGrosh.loadBills(start, end, sortby)  |
 
 ## Chaining requests
