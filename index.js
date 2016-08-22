@@ -6,7 +6,6 @@ var deferred = require('deferred');
 function HGrosh(credential, http_proxy_options) {
   // Определяем домен в зависимости от типа запуска
   this.domain = credential.production ? 'https://www.hutkigrosh.by' : 'http://trial.hgrosh.by';
-  delete credential.production;
 
   // Сохраняем реквизиты для авторизации
   this.credential = credential;
